@@ -2,7 +2,7 @@
 
 ![alt text](https://github.com/GoGagoo/fastapi_counrties/blob/main/public/cover.jpg?raw=true)
 
-Добро пожаловать в репозиторий моего сайта [«FastAPI Country SpeedSearch»](https://fastapi-counrties.vercel.app). Сайт из себя представляет поисковую строку, которая выдает результаты (страны) по поисковому запросу за миллисекунды. 
+Добро пожаловать в репозиторий моего сайта [«FastAPI Country SpeedSearch»](https://fastapi-counrties.vercel.app). Сайт из себя представляет поисковую строку, которая выдает результаты (страны) по поисковому запросу за миллисекунды. Внимание, работает только через VPN!
 
 ## Особенности
 
