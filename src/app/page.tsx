@@ -8,6 +8,7 @@ import {
 	CommandItem,
 	CommandList,
 } from '@/components/ui/command'
+import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 export default function Home() {
@@ -40,26 +41,23 @@ export default function Home() {
 		<main className={`flex flex-col min-h-screen ${darkMode && 'dark'}`}>
 			<button
 				onClick={toggleDarkMode}
-				className='absolute w-12 h-12 top-8 right-16 bg-neutral-900 dark:bg-white rounded-full text-white dark:text-black animate-in duration-200 font-semibold'
+				className='absolute outline-none w-10 h-10 sm:w-14 sm:h-14 top-8 right-2 sm:right-16 bg-neutral-900 hover:bg-neutral-300 dark:hover:bg-neutral-300 dark:bg-white rounded-full text-white dark:text-black animate-in duration-200 font-semibold'
 			>
 				{darkMode ? 'LGT' : 'DRK'}
 			</button>
 			<div className='grid grid-rows-[1fr_auto] h-screen w-screen bg-neutral-200 dark:bg-neutral-900'>
-				<div className='flex flex-col gap-6 dark:bg-neutral-900 items-center pt-32 duration-500 animate-in animate fade-in-5 slide-in-from-bottom-2.5'>
-					<h1
-						className='text-5xl tracking-tight font-bold animate-text-gradient bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-700 hover:bg-gradient-to-l hover:from-yellow-700 hover:to-yellow-200
-    bg-[200%_auto] bg-clip-text text-transparent'
-					>
+				<div className='flex flex-col gap-6 dark:bg-neutral-900 items-center pt-28 duration-500 animate-in animate fade-in-5 slide-in-from-bottom-2.5'>
+					<h1 className='text-5xl tracking-tight font-bold animate-text-gradient bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-700 hover:bg-gradient-to-l hover:from-yellow-700 hover:to-yellow-200 bg-[200%_auto] bg-clip-text text-transparent'>
 						SpeedSearch⚡
 					</h1>
-					<p className='text-zinc-600 text-lg max-w-prose text-center dark:text-white'>
+					<p className='text-zinc-600 text-sm sm:text-[16px] max-w-prose text-center dark:text-white'>
 						A high-performance API built with Hono, Next.js and Cloudflare.
 						<br />
-						Type a query below and get your results in miliseconds.
+						Type a query below and get your results in milliseconds.
 					</p>
 
-					<div className='max-w-md w-full'>
-						<Command className='shadow-lg'>
+					<div className='max-w-md w-80 sm:w-full'>
+						<Command className='shadow-lg outline-none'>
 							<CommandInput
 								value={input}
 								onValueChange={setInput}
@@ -99,9 +97,17 @@ export default function Home() {
 						</Command>
 					</div>
 
-					{/* <footer className='mt-auto mb-8'>
-						<Link href='https://tailwindcss.com/docs/box-shadowhttps://github.com/GoGagoo/fastapi_counrties'>GAGO</Link>
-					</footer> */}
+					<footer className='mb	-auto'>
+						<Link
+							target='_blank'
+							className='dark:text-white font-semibold'
+							href='https://gogagoo-cv.vercel.app/'
+						>
+							<button className='cursor-pointer rounded-md bg-neutral-950 dark:bg-white px-3 py-1 text-sm text-white dark:text-black dark:hover:bg-neutral-300 shadow-lg shadow-neutral-500/20 outline-none hover:bg-neutral-800 active:bg-neutral-700 transition active:scale-[.95]'>
+								GoGagoo 2024
+							</button>
+						</Link>
+					</footer>
 				</div>
 			</div>
 		</main>
